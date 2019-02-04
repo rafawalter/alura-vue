@@ -4905,6 +4905,10 @@ vue-loader@^13.0.5:
     vue-style-loader "^3.0.0"
     vue-template-es2015-compiler "^1.6.0"
 
+vue-resource@1.0.3:
+  version "1.0.3"
+  resolved "http://nexus.bndes.net:8180/nexus/repository/npmjs-registry/vue-resource/-/vue-resource-1.0.3.tgz#8d52d0d8a9ed5f2ae704c68d530c84ceaf97be14"
+
 vue-style-loader@^3.0.0:
   version "3.1.2"
   resolved "http://nexus.bndes.net:8180/nexus/repository/npmjs-registry/vue-style-loader/-/vue-style-loader-3.1.2.tgz#6b66ad34998fc9520c2f1e4d5fa4091641c1597a"

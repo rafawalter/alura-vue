@@ -1,0 +1,1 @@
+./alurapic/yarn run dev
