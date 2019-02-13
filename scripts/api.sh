@@ -1,1 +1,2 @@
-./api/yarn start
+cd ./api
+yarn start

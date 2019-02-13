@@ -1,1 +1,2 @@
-./alurapic/yarn run dev
+cd ./alurapic
+yarn run dev
