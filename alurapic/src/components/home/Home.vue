@@ -19,6 +19,11 @@
             :titulo="foto.titulo"
             v-meu-transform:scale.animate="1.2"
           />
+
+          <router-link :to="{ name: 'altera', params: { id: foto._id} }">
+            <meu-botao rotulo="Alterar" tipo="button"/>
+          </router-link>
+
           <meu-botao
             rotulo="remover"
             tipo="button"
@@ -39,7 +44,7 @@ import Botao from "../shared/botao/Botao";
 
 import transform from "../../directives/Transform";
 
-import FotoService from '../../domain/foto/FotoService';
+import FotoService from "../../domain/foto/FotoService";
 
 export default {
   components: {
@@ -61,8 +66,7 @@ export default {
           this.mensagem = "Foto removida com sucesso";
         },
         err => {
-          this.mensagem = "Não foi possível remover a foto";
-          console.log(err);
+          this.mensagem = err.message;
         }
       );
     }
@@ -91,9 +95,12 @@ export default {
   created() {
     this.service = new FotoService(this.$resource);
 
-    this.service
-      .lista()
-      .then(fotos => (this.fotos = fotos), err => console.log(err));
+    this.service.lista().then(
+      fotos => (this.fotos = fotos),
+      err => {
+        this.mensagem = err.message;
+      }
+    );
   }
 };
 </script>
