@@ -8,8 +8,18 @@ import { routes } from './routes';
 
 import './directives/Transform';
 
-Vue.use(VueRouter);
+import VeeValidate from 'vee-validate';
+import msgVeeValidatePtBr from '../node_modules/vee-validate/dist/locale/pt_BR.js';
+Vue.use(VeeValidate, {
+    locale: 'pt_BR',
+    dictionary: {
+        pt_BR: {
+            messages: msgVeeValidatePtBr
+        }
+    }
+});
 
+Vue.use(VueRouter);
 const router = new VueRouter({
     routes,
     mode: 'history',
