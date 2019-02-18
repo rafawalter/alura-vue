@@ -1,0 +1,1 @@
+scripts/build.sh && scripts/dist.sh

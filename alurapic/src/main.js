@@ -9,7 +9,7 @@ import { routes } from './routes';
 import './directives/Transform';
 
 import VeeValidate from 'vee-validate';
-import msgVeeValidatePtBr from '../node_modules/vee-validate/dist/locale/pt_BR.js';
+import msgVeeValidatePtBr from './pt_BR.js';
 Vue.use(VeeValidate, {
     locale: 'pt_BR',
     dictionary: {

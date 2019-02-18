@@ -55,7 +55,7 @@ import Botao from "../shared/botao/Botao.vue";
 
 import Foto from "../../domain/foto/Foto.js";
 
-import FotoService from "../../domain/foto/FotoService";
+import FotoService from "../../domain/foto/FotoService.js";
 
 export default {
   components: {
